@@ -10,7 +10,7 @@ const RootQuery = new GraphQLObjectType({
             type: TruismType,
             args: { id: { type: GraphQLID } },
             resolve(parentValue, args) {
-                const query = `SELECT * FROM trusims WHERE id= $1`;
+                const query = `SELECT * FROM truisms WHERE id= $1`;
                 const values = [args.id];
 
                 return db
